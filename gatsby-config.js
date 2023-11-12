@@ -76,6 +76,16 @@ module.exports = {
         printRejected: true,
       },
     }, // must be after other CSS plugins
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `silkscreen\:400`,
+          `kodchasan\:400, 500, 600, 700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
     "gatsby-plugin-netlify", // make sure to keep it last in the array
   ],
 };

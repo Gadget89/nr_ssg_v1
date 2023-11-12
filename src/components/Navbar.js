@@ -1,21 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
-import logo from "../img/logo.svg";
+import { Link} from "gatsby";
+import { useLocation } from '@reach/router';
+import logo from "../img/brand_assets/pictoral_mark_main_black.svg";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const location = useLocation();
 
   return (
     <nav
-      className="navbar is-transparent"
+      className="navbar is-fixed-top"
       role="navigation"
       aria-label="main-navigation"
     >
       <div className="container">
         <div className="navbar-brand">
-          <Link to="/" className="navbar-item" title="Logo">
-            <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
+          <Link to="/" className="navbar-item" title="Return Home">
+            <img src={logo} alt="Nic Roybal logo" />
           </Link>
           {/* Hamburger menu */}
           <button
@@ -23,53 +24,37 @@ const Navbar = () => {
             aria-expanded={isActive}
             onClick={() => setIsActive(!isActive)}
           >
-            <span />
-            <span />
-            <span />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" style={{height: "3px", width: "8px", left: "50%"}} />
+            <span aria-hidden="true" />
           </button>
         </div>
-        <ul id="navMenu" className={` navbar-start has-text-centered navbar-menu ${isActive && "is-active"}`}>
-            {/* TODO: inline override of padding is a result of refactoring
-                to a ul for accessibilty purposes, would like to see a css
-                re-write that makes this unneccesary.
-             */}
-            <li className="navbar-item" style={{padding: "0px"}}>
-              <Link className="navbar-item" to="/about">
+        <ul id="navMenu" className={` navbar-end has-text-right navbar-menu ${isActive && "is-active"}`}>
+            <li className="navbar-item">
+              <Link className={location.pathname === '/about' ? 'isCurrentPage' : 'navbar-item'} to="/about">
                 About
               </Link>
             </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/products">
+            <li className="navbar-item">
+            <Link className={location.pathname === '/products' ? 'isCurrentPage' : 'navbar-item'} to="/products">
               Products
             </Link>
             </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/blog">
+            <li className="navbar-item">
+            <Link className={location.pathname === '/blog' ? 'isCurrentPage' : 'navbar-item'} to="/blog">
               Blog
             </Link>
             </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/contact">
+            <li className="navbar-item">
+            <Link className={location.pathname === '/contact' ? 'isCurrentPage' : 'navbar-item'} to="/contact">
               Contact
             </Link>
             </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/contact/examples">
-              Form Examples
+            <li className="navbar-item">
+            <Link className={location.pathname === '/contact/examples' ? 'isCurrentPage' : 'navbar-item'} to="/contact/examples">
+              Forms
             </Link>
             </li>
-          <li className="navbar-end has-text-centered">
-            <a
-              className="navbar-item"
-              href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="icon">
-                <img src={github} alt="Github" />
-              </span>
-            </a>
-          </li>
         </ul>
       </div>
     </nav>

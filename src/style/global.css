@@ -1,0 +1,359 @@
+/* Brand styles */
+:root {
+    --primary: #219ebc;
+    --secondary: #ffb703;
+    --accent-1: #fc8400;
+    --accent-2: #023047;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: silkscreen;
+}
+
+body {
+    font-family: kodchasan;
+}
+
+/* Navigation styles */
+nav {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.navbar-menu {
+    overflow: hidden;
+}
+
+li .navbar-item {
+    text-transform: uppercase;
+    text-align: end;
+    margin-right: 0.5rem;
+    padding: 0px;
+    border-bottom: solid 4px transparent;
+}
+
+.navbar-item img {
+    max-height: 3rem;
+}
+
+.navbar-burger span:nth-child(1) {
+    height: 3px;
+    top: calc(50% - 8px);
+}
+
+.navbar-burger span:nth-child(3) {
+    height: 3px;
+    top: calc(50% + 6px);
+}
+
+.navbar-burger.is-active span:nth-child(1) {
+    -webkit-transform: translateY(-5px) rotate(-45deg);
+    transform: translateX(-5px) translateY(-5px) rotate(45deg);
+    top: calc(50% + 6px);
+}
+
+.navbar-burger.is-active span:nth-child(3) {
+    -webkit-transform: translateY(-5px) rotate(-45deg);
+    transform: translateX(-5px) translateY(-5px) rotate(-45deg);
+}
+
+.navbar-item img {
+    max-height: 2.5rem;
+    width: 88px;
+}
+
+li .navbar-item:hover,
+li .isCurrentPage {
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+    border-bottom: solid 4px var(--accent-1);
+    font-weight: bold;
+    color: black;
+}
+
+/* Styling for the splash screen */
+.splash {
+    display: flex;
+    justify-content: center;
+    max-width: fit-content;
+    margin: 22vh auto;
+}
+
+.splash-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 10px; */
+    margin-top: 10vh;
+}
+
+/* Sphere component styles */
+.sphere {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 50%;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    background: radial-gradient(circle at 65% 15%, var(--secondary) 3%, var(--primary) 80%);
+
+}
+
+.sphere:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* box-shadow: -40px 10px 70px 10px rgba(0, 0, 0, 0.05) inset; */
+    z-index: 2;
+}
+
+.sphere:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    /* background: radial-gradient(circle at 50% 80%, #81e8f6, #76deef 10%, #055194 66%, #062745 100%); */
+}
+
+.sphere .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    -webkit-transform: rotateX(90deg) translateZ(-100px);
+    -moz-transform: rotateX(90deg) translateZ(-100px);
+    -ms-transform: rotateX(90deg) translateZ(-100px);
+    -o-transform: rotateX(90deg) translateZ(-100px);
+    transform: rotateX(90deg) translateZ(-100px);
+    z-index: -1;
+}
+
+.stage {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    -o-perspective: 1200px;
+    perspective: 1200px;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    -o-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+    animation: zoom 1s ease-in;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0.5, 0.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+/* .gradient-overlay {
+    background: radial-gradient(circle at 65% 15%, var(--secondary) 3%, var(--primary) 80%);
+} */
+
+#splash-logo {
+    width: 200px;
+    height: auto;
+    margin: 1rem 10rem 0 0;
+    animation: fadeIn ease-in 1.5s;
+    -webkit-animation: fadeIn ease 1.5s;
+    -moz-animation: fadeIn ease 1.5s;
+    -o-animation: fadeIn ease 1.5s;
+    -ms-animation: fadeIn ease 1.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.payload {
+    min-height: 92vh;
+}
+
+/* Carousel component styles */
+.carousel-display {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* Add any additional carousel styles */
+}
+
+.carousel-content {
+    text-align: left;
+    margin: 0 1rem;
+    width: 20vw;
+}
+
+.content-link,
+.breadcrumb-wrapper {
+    display: flex;
+    justify-content: end;
+    width: 20vw;
+    margin-right: 1rem;
+}
+
+.breadcrumb-wrapper {
+    margin-left: 1rem;
+}
+
+.auto-control {
+    text-transform: uppercase;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.controls {
+    margin-top: 20px;
+
+    button {
+        margin: 0 10px;
+        /* Add styles for control buttons */
+    }
+}
+
+/* .breadcrumb-wrapper {
+    flex-direction: column;
+} */
+
+.slide-arrow {
+    border: none;
+    background: none;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.slide-arrow:first-child {
+    rotate: 180deg;
+}
+
+.breadcrumbs {
+    display: block;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.breadcrumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    padding-inline: 0;
+}
+
+.breadcrumb-active {
+    background-color: transparent;
+
+}
+
+/* Buttons & link styling */
+.button-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background-color: var(--accent-1);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    min-width: 200px;
+    text-align: center;
+}
+
+.button-link:hover {
+    background-color: var(--secondary);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    #splash-logo {
+        margin: 0;
+    }
+
+    .splash {
+        flex-direction: column;
+        align-items: center;
+        margin: 18% auto;
+    }
+
+    .navbar-menu {
+        padding-top: 25vh;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .payload {
+        min-height: 90vh;
+    }
+}
