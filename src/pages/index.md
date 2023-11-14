@@ -29,7 +29,7 @@ carousel:
       text: >
         Explore my curated web design and development projects showcasing creativity and expertise with captivating interfaces and seamless functionality.
       buttonLabel: Check it out
-      buttonLink: /products
+      buttonLink: /portfolio
     - image: /img/sat.png
       title: Let's chat
       text: >
