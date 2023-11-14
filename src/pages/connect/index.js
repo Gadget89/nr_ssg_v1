@@ -1,5 +1,6 @@
 import * as React from "react";
 import { navigate } from "gatsby-link";
+import { Helmet } from "react-helmet";
 import Layout from "../../components/Layout";
 
 function encode(data) {
@@ -35,15 +36,20 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <div>
+        <Helmet>
+          <title>Connect</title>
+        </Helmet>
+        <Layout>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+              <h1>Let's talk</h1>
+              <p>Hey there! If you need mentorship, are exploring freelance opportunities, or simply want to connect with me, I'm here for you. Although I'm passionate about my current role and not actively seeking full-time positions, I'm always open to sharing my knowledge and exploring exciting freelance projects. Let's have a chat and collaborate to create amazing things together. Looking forward to hearing from you!</p>
               <form
-                name="contact"
+                name="connect"
                 method="post"
-                action="/contact/thanks/"
+                action="/connect/thanks/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
@@ -57,16 +63,31 @@ export default class Index extends React.Component {
                   </label>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={"name"}>
-                    Your name
+                  <label className="label" htmlFor={"first-name"}>
+                    First Name
                   </label>
                   <div className="control">
                     <input
                       className="input"
                       type={"text"}
-                      name={"name"}
+                      name={"first-name"}
                       onChange={this.handleChange}
-                      id={"name"}
+                      id={"first-name"}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={"last-name"}>
+                    Last Name
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={"text"}
+                      name={"last-name"}
+                      onChange={this.handleChange}
+                      id={"last-name"}
                       required={true}
                     />
                   </div>
@@ -101,7 +122,33 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-link" type="submit">
+                  <label className="label" htmlFor={"freelance-request"}>
+                    Freelance Opportunities
+                  </label>
+                  <div className="control">
+                    <input
+                      type={"checkbox"}
+                      name={"freelance-request"}
+                      id={"freelance-request"}
+                    />
+                    <span style={{marginLeft: "1rem"}}>I'm interested in your work and would like more information about your freelance services and availability.</span>
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={"update-availability"}>
+                    Full-time Availability
+                  </label>
+                  <div className="control">
+                    <input
+                      type={"checkbox"}
+                      name={"update-availability"}
+                      id={"update-availability"}
+                    />
+                    <span style={{marginLeft: "1rem"}}>I'm a recruiter and would like to stay updated on your availability for future opportunities. Please send me your resume when you're open to new opportunities.</span>
+                  </div>
+                </div>
+                <div className="field">
+                  <button className="button-link" style={{marginTop: "1rem"}} type="submit">
                     Send
                   </button>
                 </div>
@@ -110,6 +157,7 @@ export default class Index extends React.Component {
           </div>
         </section>
       </Layout>
+      </div>
     );
   }
 }

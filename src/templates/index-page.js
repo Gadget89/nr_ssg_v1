@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
+// import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
-import BlogRoll from "../components/BlogRoll";
-import FullWidthImage from "../components/FullWidthImage";
+// import BlogRoll from "../components/BlogRoll";
+// import FullWidthImage from "../components/FullWidthImage";
 import Carousel from "../components/Carousel";
 
 // eslint-disable-next-line
@@ -22,6 +23,9 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
+      <Helmet>
+        <title>Heya!</title>
+      </Helmet>
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -100,7 +104,12 @@ export const pageQuery = graphql`
           slides {
             image {
               childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+                gatsbyImageData(
+                  width: 240,
+                  placeholder: BLURRED, 
+                  quality: 64, 
+                  layout: CONSTRAINED
+                )
               }
             }
             title

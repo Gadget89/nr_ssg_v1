@@ -4,8 +4,9 @@ import Layout from "../components/Layout";
 const NotFoundPage = () => (
   <Layout>
     <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <h1>Oh snap!</h1>
+      <p>The page you are looking for doesn't exist yet, the sadness is real</p>
+      <a className="button-link" style={{marginTop: "1rem"}} href="/">Return home</a>
     </div>
   </Layout>
 );

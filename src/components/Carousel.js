@@ -47,10 +47,14 @@ const Carousel = ({ slideItems }) => {
   const currentSlideImage = getImage(currentSlideItem.image);
 
   return (
-    <div className="columns is-multiline">
+    <div 
+      className="columns is-multiline"
+      style={{
+        justifyContent: "center",
+      }}>
       
 
-      <div className="splash">
+      <div className="carousel-body">
         <div className="splash-column">
         <span className="carousel-display">
       <button className="slide-arrow" onClick={goToPrevSlide} aria-label="Last slide" data-tooltip="Last slide">
@@ -84,23 +88,7 @@ const Carousel = ({ slideItems }) => {
         </div>
         <div className="splash-column">
           <section className="stage">
-          {/* <figure 
-            // className="sphere"
-            style={{
-              display: "inline-block",
-              width: "100%",
-              height: "100%",
-              margin: "0",
-              borderRadius: "50%",
-              position: "relative",
-              backgroundImage: `url(${currentSlideImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              }}>
-              <span className="shadow"></span>
-            </figure> */}
-            <GatsbyImage image={currentSlideImage} alt="Slide" />
+            <GatsbyImage image={currentSlideImage} alt="Slide" loading="eager" />
           </section>
         </div>
       </div>

@@ -15,12 +15,19 @@ h4 {
 }
 
 body {
+    max-width: 100vw;
+    overflow: hidden;
+    font-family: kodchasan;
+}
+
+button {
     font-family: kodchasan;
 }
 
 /* Navigation styles */
 nav {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* max-width: 100vw; */
 }
 
 .navbar-menu {
@@ -79,7 +86,7 @@ li .isCurrentPage {
     display: flex;
     justify-content: center;
     max-width: fit-content;
-    margin: 22vh auto;
+    margin: 30vh auto;
 }
 
 .splash-column {
@@ -87,7 +94,7 @@ li .isCurrentPage {
     flex-direction: column;
     align-items: center;
     /* margin: 10px; */
-    margin-top: 10vh;
+    /* margin-top: 22vh; */
 }
 
 /* Sphere component styles */
@@ -156,6 +163,7 @@ li .isCurrentPage {
     -o-perspective-origin: 50% 50%;
     perspective-origin: 50% 50%;
     animation: zoom 1s ease-in;
+    margin-left: 6rem;
 }
 
 @keyframes zoom {
@@ -238,6 +246,11 @@ li .isCurrentPage {
 }
 
 /* Carousel component styles */
+.carousel-body {
+    display: flex;
+    margin-top: 30vh;
+}
+
 .carousel-display {
     display: flex;
     /* flex-direction: column; */
@@ -279,10 +292,6 @@ li .isCurrentPage {
     }
 }
 
-/* .breadcrumb-wrapper {
-    flex-direction: column;
-} */
-
 .slide-arrow {
     border: none;
     background: none;
@@ -320,6 +329,7 @@ li .isCurrentPage {
 .button-link {
     display: inline-block;
     padding: 0.5rem 1rem;
+    border: solid 2px transparent;
     border-radius: 999px;
     background-color: var(--accent-1);
     color: #fff;
@@ -333,7 +343,125 @@ li .isCurrentPage {
 
 .button-link:hover {
     background-color: var(--secondary);
+    color: black;
+    border: solid 2px black;
 }
+
+/* Timeline styling */
+.timeline-container {
+    /* background: #232931; */
+    width: 540px;
+    /* height: 500px; */
+    margin: 0 auto;
+    position: relative;
+    /* margin-top: 10%; */
+    /* box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5); */
+}
+
+.rightbox {
+    padding: 0em 34rem 0em 0em;
+    height: 100%;
+}
+
+.rb-container {
+    width: 25vw;
+    margin: auto;
+    display: block;
+    position: relative;
+}
+
+.rb-container ul.rb {
+    /* margin: 2.5em 0; */
+    margin-left: 1rem;
+    padding: 0;
+    display: inline-block;
+}
+
+.rb-container ul.rb li {
+    list-style: none;
+    margin: auto;
+    /* margin-left: 10em; */
+    min-height: 50px;
+    border-left: 3px solid black;
+    padding: 0 0 50px 30px;
+    position: relative;
+}
+
+.rb-container ul.rb li:last-child {
+    border-left: 3px;
+}
+
+.rb-container ul.rb li::before {
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    content: " ";
+    border: 10px solid black;
+    border-radius: 500%;
+    background: black;
+    height: 10px;
+    width: 10px;
+    /* transition: all 500ms ease-in-out; */
+}
+
+/* .rb-container ul.rb li:hover::before {
+    border-color: #232931;
+    transition: all 1000ms ease-in-out;
+} */
+
+ul.rb li .timestamp {
+    color: black;
+    position: relative;
+    /* width: 22vw; */
+    font-weight: bold;
+    /* font-size: 12px; */
+    /* font-weight: 700; */
+}
+
+.item-title {
+    color: black;
+}
+
+/* Portfolio card styling */
+
+.card {
+    /* width: 300px; */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.card-content {
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+/* .card-text {
+    color: #666;
+} */
+
+/* .card-link {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #007bff;
+    margin-top: 8px;
+} */
+
+
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
@@ -341,10 +469,45 @@ li .isCurrentPage {
         margin: 0;
     }
 
+    .section {
+        padding: 1rem;
+    }
+
+    .timeline-container {
+        width: 100vw;
+    }
+
+    .intro,
+    .rb-container {
+        width: 90vw;
+    }
+
+    .timestamp {
+        width: 78vw;
+    }
+
+    .card {
+        width: 90vw;
+    }
+
     .splash {
+        margin: 20vh auto 0;
+        flex-direction: column;
+    }
+
+    .carousel-body {
         flex-direction: column;
         align-items: center;
-        margin: 18% auto;
+        /* margin: 18% auto; */
+        margin: 0;
+    }
+
+    .stage {
+        margin-left: 0;
+    }
+
+    .splash-column {
+        margin-top: 2rem;
     }
 
     .navbar-menu {
@@ -355,5 +518,25 @@ li .isCurrentPage {
 
     .payload {
         min-height: 90vh;
+    }
+
+    .content-link {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .breadcrumb-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        width: fit-content;
+    }
+
+    .carousel-display {
+        width: 90vw;
+    }
+
+    .carousel-content {
+        width: 100%;
     }
 }

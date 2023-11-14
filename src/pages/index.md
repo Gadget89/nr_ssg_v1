@@ -27,22 +27,15 @@ carousel:
     - image: /img/notebook.png
       title: Project Portfolio
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-      buttonLabel: Let's go
+        Explore my curated web design and development projects showcasing creativity and expertise with captivating interfaces and seamless functionality.
+      buttonLabel: Check it out
       buttonLink: /products
     - image: /img/sat.png
       title: Let's chat
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-      buttonLabel: Let's talk
-      buttonLink: /contact
+        Together, we can bring your ideas to life and create something truly amazing. Let's connect and make it happen!
+      buttonLabel: Connect
+      buttonLink: /connect
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their

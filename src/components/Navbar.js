@@ -36,23 +36,18 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="navbar-item">
-            <Link className={location.pathname === '/products' ? 'isCurrentPage' : 'navbar-item'} to="/products">
-              Products
+            <Link className={location.pathname === '/portfolio' ? 'isCurrentPage' : 'navbar-item'} to="/portfolio">
+              Portfolio
             </Link>
             </li>
-            <li className="navbar-item">
+            {/* <li className="navbar-item">
             <Link className={location.pathname === '/blog' ? 'isCurrentPage' : 'navbar-item'} to="/blog">
               Blog
             </Link>
-            </li>
+            </li> */}
             <li className="navbar-item">
-            <Link className={location.pathname === '/contact' ? 'isCurrentPage' : 'navbar-item'} to="/contact">
-              Contact
-            </Link>
-            </li>
-            <li className="navbar-item">
-            <Link className={location.pathname === '/contact/examples' ? 'isCurrentPage' : 'navbar-item'} to="/contact/examples">
-              Forms
+            <Link className={location.pathname === '/connect' ? 'isCurrentPage' : 'navbar-item'} to="/connect">
+              Connect
             </Link>
             </li>
         </ul>
