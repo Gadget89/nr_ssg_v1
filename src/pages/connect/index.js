@@ -1,6 +1,5 @@
 import * as React from "react";
 import { navigate } from "gatsby-link";
-import { Helmet } from "react-helmet";
 import Layout from "../../components/Layout";
 
 function encode(data) {
@@ -37,15 +36,13 @@ export default class Index extends React.Component {
   render() {
     return (
       <div>
-        <Helmet>
-          <title>Connect</title>
-        </Helmet>
         <Layout>
         <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1>Let's talk</h1>
-              <p>Hey there! If you need mentorship, are exploring freelance opportunities, or simply want to connect with me, I'm here for you. Although I'm passionate about my current role and not actively seeking full-time positions, I'm always open to sharing my knowledge and exploring exciting freelance projects. Let's have a chat and collaborate to create amazing things together. Looking forward to hearing from you!</p>
+      <div className="container">
+        <div className="content">
+          <div className="center-wrapper">
+          <h1>Let's talk</h1>
+              <p className="intro">Hey there! If you need mentorship, are exploring freelance opportunities, or simply want to connect with me, I'm here for you. Although I'm passionate about my current role and not actively seeking full-time positions, I'm always open to sharing my knowledge and exploring exciting freelance projects. Let's have a chat and collaborate to create amazing things together. Looking forward to hearing from you!</p>
               <form
                 name="connect"
                 method="post"
@@ -53,6 +50,7 @@ export default class Index extends React.Component {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
+                className="intro"
               >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
@@ -130,6 +128,7 @@ export default class Index extends React.Component {
                       type={"checkbox"}
                       name={"freelance-request"}
                       id={"freelance-request"}
+                      value={"Requested Freelance Info: True"}
                     />
                     <span style={{marginLeft: "1rem"}}>I'm interested in your work and would like more information about your freelance services and availability.</span>
                   </div>
@@ -143,6 +142,7 @@ export default class Index extends React.Component {
                       type={"checkbox"}
                       name={"update-availability"}
                       id={"update-availability"}
+                      value={"Requested Resume: True"}
                     />
                     <span style={{marginLeft: "1rem"}}>I'm a recruiter and would like to stay updated on your availability for future opportunities. Please send me your resume when you're open to new opportunities.</span>
                   </div>
@@ -153,9 +153,10 @@ export default class Index extends React.Component {
                   </button>
                 </div>
               </form>
-            </div>
           </div>
-        </section>
+        </div>
+      </div>
+     </section>
       </Layout>
       </div>
     );

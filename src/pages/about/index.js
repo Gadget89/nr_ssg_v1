@@ -1,22 +1,16 @@
 import React from "react";
 // import { navigate } from "gatsby-link";
-import { Helmet } from "react-helmet";
 import Layout from "../../components/Layout";
+import IconBar from "../../components/IconBar";
 
 const About = () => {
     return (
       <div>
-        <Helmet>
-          <title>About</title>
-        </Helmet>
         <Layout>
         <section className="section">
           <div className="container">
             <div className="content">
-              {/* <h1>Portfolio</h1> */}
-              
-              {/* begin */}
-              <div class="timeline-container">
+              <div className="center-wrapper">
               <h1>About</h1>
               <div className="intro">Passionate about improving the web through design and development, I am a soon-to-be graduate
 of Arizona State University's Bachelor of Applied Science program in Internet & Web
@@ -144,12 +138,12 @@ expectations and leave a lasting impression on all customers and partners.
                         </p>
                     </li>
                     </ul>
+                    <IconBar />
                 </div>
                 </div>
 
 
                 </div>
-              {/* end */}
               
             </div>
           </div>

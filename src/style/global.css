@@ -97,6 +97,42 @@ li .isCurrentPage {
     /* margin-top: 22vh; */
 }
 
+/* Social Media Link component styles */
+.social-media-container {
+    text-align: center;
+}
+
+.social-media-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media-icon-link {
+    text-align: center;
+    margin: 0 17px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-media-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.social-media-icon-name {
+    display: block;
+    font-size: 1rem;
+}
+
+
 /* Sphere component styles */
 .sphere {
     display: inline-block;
@@ -348,7 +384,7 @@ li .isCurrentPage {
 }
 
 /* Timeline styling */
-.timeline-container {
+.center-wrapper {
     /* background: #232931; */
     width: 540px;
     /* height: 500px; */
@@ -473,7 +509,7 @@ ul.rb li .timestamp {
         padding: 1rem;
     }
 
-    .timeline-container {
+    .center-wrapper {
         width: 100vw;
     }
 
@@ -538,5 +574,9 @@ ul.rb li .timestamp {
 
     .carousel-content {
         width: 100%;
+    }
+
+    .social-media-icon-link {
+        margin: 0 7px;
     }
 }

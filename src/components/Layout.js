@@ -24,12 +24,29 @@ const TemplateWrapper = ({ children }) => {
 
       setTimeout(() => {
         setShowSplash(false);
-        // sessionStorage.setItem('hasShownSplash', 'true');
+        sessionStorage.setItem('hasShownSplash', 'true');
       }, 2500);
     } else {
       setShowSplash(false);
     }
   }, [location]);
+
+  const headTitle = () => {
+    switch (location.pathname) {
+      case '/':
+        return 'Hello - Nic Roybal';
+      case '/about':
+        return 'About - Nic Roybal';
+      case '/portfolio':
+        return 'Portfolio - Nic Roybal';
+      case '/connect':
+        return 'Connect - Nic Roybal';
+      case '/connect/success':
+        return 'Thanks - Nic Roybal';
+      default:
+        return 'Oh, snap - Nic Roybal';
+    }
+  };
 
   // const showSplash = true;
 
@@ -37,7 +54,7 @@ const TemplateWrapper = ({ children }) => {
     <div>
       <Helmet>
         <html className="has-navbar-fixed-top" lang="en" />
-        <title>Loading...</title>
+        <title>{headTitle()}</title>
         <meta name="description" content={description} />
 
         <link
@@ -90,7 +107,13 @@ const TemplateWrapper = ({ children }) => {
     
       )}
       {!showSplash && (
-        <div><Navbar /><main className="payload">{children}</main><Footer /></div>
+        <div>
+          <Navbar />
+          <main className="payload">
+            {children}
+          </main>
+          <Footer />
+        </div>
       )}
     </div>
     </div>

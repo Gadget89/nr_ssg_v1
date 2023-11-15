@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Helmet } from "react-helmet";
 // import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
@@ -23,9 +22,6 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <Helmet>
-        <title>Heya!</title>
-      </Helmet>
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
