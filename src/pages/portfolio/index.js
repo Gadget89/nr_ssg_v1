@@ -54,19 +54,24 @@ using a cube that can be rotated horizontally to display up to three sides of co
 
         <div className="card">
         <div className="card-content">
+            <div className="card-title">Digital Storefront</div>
+            <p className="card-text">There are tons of websites that offer their products or services directly to consumers through the e-commerce section of their website. This project delves into the fundamentals of shopping cart functionality. The imaginary website offers fruit throughout the galaxy. The goal of this undertaking was to gain a better understanding of how to program a website with a shopping cart feature.</p>
+            <a
+            href="https://bright-marzipan-14a860.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="button-link">View</a>
+        </div>
+        </div>
+
+        <div className="card">
+        <div className="card-content">
             <div className="card-title">Taming the Wild Wild Web</div>
             <p className="card-text">Web development can be a challenging task, especially for small businesses. The main objective of this project was to develop a website that could assist users in determining the necessary scope for their website and provide suggestions for the next steps. The application utilizes Node.js and React, making it a reliable and efficient tool.</p>
             <a href="#" className="button-link">View</a>
         </div>
         </div>
         
-        <div className="card">
-        <div className="card-content">
-            <div className="card-title">Digital Storefront</div>
-            <p className="card-text">With countless options for an e-commerce website, this project offers a template site for inspiration. Web technologies are constantly improving and this boilerplate code uses a modern webstack including MongoDB, Express, React, and Node.js. The project includes an admin view for inventory management.</p>
-            <a href="#" className="button-link">View</a>
-        </div>
-        </div>
                 </div>
               {/* end */}
               
