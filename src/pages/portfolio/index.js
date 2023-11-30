@@ -27,12 +27,14 @@ const Portfolio = () => {
              className="button-link">View</a>
             </div>
         </div>
+
         <div className="card">
         <div className="card-content">
-            <div className="card-title">Feel the Beat</div>
-            <p className="card-text">A freelance audio engineer required a portfolio website to launch his business. The website created for this client is a single-page static website built using HTML, CSS, and JavaScript. As there was limited content available at the time of launch, the site needed to be refined to showcase the portfolio in the best possible way.</p>
-            <a 
-            href="https://www.ziawavelength.com/" 
+            <div className="card-title">Cube Navigation</div>
+            <p className="card-text">This project aims to test the effectiveness of using 3D CSS styling and animations for website navigation. Instead of the traditional navigation menu, the approach involves
+using a cube that can be rotated horizontally to display up to three sides of content. The proof of concept will be implemented on an e-commerce site to determine its potential for improving user experience. The project uses HTML, CSS, and JavaScript.</p>
+            <a
+            href="https://kaleidoscopic-meerkat-37ef34.netlify.app/"
             target="_blank"
             rel="noreferrer"
             className="button-link">View</a>
@@ -41,11 +43,10 @@ const Portfolio = () => {
 
         <div className="card">
         <div className="card-content">
-            <div className="card-title">Cube Navigation</div>
-            <p className="card-text">This project aims to test the effectiveness of using 3D CSS styling and animations for website navigation. Instead of the traditional navigation menu, the approach involves
-using a cube that can be rotated horizontally to display up to three sides of content. The proof of concept will be implemented on an e-commerce site to determine its potential for improving user experience. The project uses HTML, CSS, and JavaScript.</p>
-            <a
-            href="https://www.curiogadget.com/"
+            <div className="card-title">Feel the Beat</div>
+            <p className="card-text">A freelance audio engineer required a portfolio website to launch his business. The website created for this client is a single-page static website built using HTML, CSS, and JavaScript. As there was limited content available at the time of launch, the site needed to be refined to showcase the portfolio in the best possible way.</p>
+            <a 
+            href="https://www.ziawavelength.com/" 
             target="_blank"
             rel="noreferrer"
             className="button-link">View</a>
