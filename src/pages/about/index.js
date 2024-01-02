@@ -12,7 +12,7 @@ const About = () => {
             <div className="content">
               <div className="center-wrapper">
               <h1>About</h1>
-              <div className="intro">Passionate about improving the web through design and development, I am a soon-to-be graduate
+              <div className="intro">Passionate about improving the web through design and development, I am a 2023
 of Arizona State University's Bachelor of Applied Science program in Internet & Web
 Development. With a coding boot camp under my belt and a genuine love for learning, I am
 continuously expanding my skills with new tools and technologies. Combining my creative mindset,
@@ -24,7 +24,7 @@ fuse intuitive design and seamless functionality.</div>
                     <ul className="rb">
                     <li className="rb-item" ng-repeat="itembx">
                         <div className="timestamp">
-                            2021 - Present
+                            2023
                         </div>
                         <div className="item-title">
                             BAS Internet & Web Development

@@ -28,7 +28,7 @@ const Portfolio = () => {
             </div>
         </div>
 
-        <div className="card">
+        {/* <div className="card">
         <div className="card-content">
             <div className="card-title">Cube Navigation</div>
             <p className="card-text">This project aims to test the effectiveness of using 3D CSS styling and animations for website navigation. Instead of the traditional navigation menu, the approach involves
@@ -39,7 +39,7 @@ using a cube that can be rotated horizontally to display up to three sides of co
             rel="noreferrer"
             className="button-link">View</a>
         </div>
-        </div>
+        </div> */}
 
         <div className="card">
         <div className="card-content">
@@ -65,13 +65,13 @@ using a cube that can be rotated horizontally to display up to three sides of co
         </div>
         </div>
 
-        <div className="card">
+        {/* <div className="card">
         <div className="card-content">
             <div className="card-title">Taming the Wild Wild Web</div>
             <p className="card-text">Web development can be a challenging task, especially for small businesses. The main objective of this project was to develop a website that could assist users in determining the necessary scope for their website and provide suggestions for the next steps. The application utilizes Node.js and React, making it a reliable and efficient tool.</p>
             <a href="#" className="button-link">View</a>
         </div>
-        </div>
+        </div> */}
         
                 </div>
               {/* end */}
