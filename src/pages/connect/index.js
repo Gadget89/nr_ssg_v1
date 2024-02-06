@@ -42,7 +42,7 @@ export default class Index extends React.Component {
         <div className="content">
           <div className="center-wrapper">
           <h1>Let's talk</h1>
-              <p className="intro">Hey there! If you need mentorship, are exploring freelance opportunities, or simply want to connect with me, I'm here for you. Although I'm passionate about my current role and not actively seeking full-time positions, I'm always open to sharing my knowledge and exploring exciting freelance projects. Let's have a chat and collaborate to create amazing things together. Looking forward to hearing from you!</p>
+              <p className="intro">Hey there! If you need mentorship, are exploring freelance opportunities, or simply want to connect with me, I'm here for you. Let's have a chat and collaborate to create amazing things together. Looking forward to hearing from you!</p>
               <form
                 name="connect"
                 method="post"
@@ -144,7 +144,7 @@ export default class Index extends React.Component {
                       id={"update-availability"}
                       value={"Requested Resume: True"}
                     />
-                    <span style={{marginLeft: "1rem"}}>I'm a recruiter and would like to stay updated on your availability for future opportunities. Please send me your resume when you're open to new opportunities.</span>
+                    <span style={{marginLeft: "1rem"}}>I'm a recruiter and would like to start a conversation about opportunities at my organization.</span>
                   </div>
                 </div>
                 <div className="field">
